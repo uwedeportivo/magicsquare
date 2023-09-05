@@ -1,7 +1,7 @@
 module MagicSquare  (magicSquares, connectedSquares) where
 
 import Data.Array
-import Data.Bits
+
 
 allTrue :: (a -> Bool) -> [a] -> Bool
 allTrue f xs = foldr (&&) True (map f xs)
@@ -9,8 +9,6 @@ allTrue f xs = foldr (&&) True (map f xs)
 rowColumnToNode :: Int -> (Int, Int) -> Int
 rowColumnToNode rows (row, column) = row * rows + column
 
-nodeToRowColumn :: Int -> Int -> (Int, Int)
-nodeToRowColumn rows vertex = (div vertex rows, mod vertex rows)
 
 listToArray :: [a] -> Array Int a
 listToArray xs = array idxs (zip (range idxs) xs)
@@ -45,7 +43,7 @@ findNode :: Node -> Graph -> Maybe (Int, Context)
 findNode _ [] = Nothing
 findNode u (v:g) = if u == fst v then Just (0, v) else 
         case (findNode u g) of
-          Just (n, v) -> Just ((n+1), v)
+          Just (n, vv) -> Just ((n+1), vv)
           Nothing -> Nothing
 
 transferEdge :: Context -> (Context, Graph) -> (Context, Graph)
