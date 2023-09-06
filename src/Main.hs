@@ -7,10 +7,10 @@ puzzle :: [String] -> IO ()
 
 puzzle args = 
     case args of
-        [sizeStr, numOnesStr] -> putStrLn $ show ms
+        [sizeStr, numOnesStr, numTakes] -> putStrLn $ show ms
                where
-                 ms = take 1 (connectedSquares (read sizeStr) (read numOnesStr))
-        _ -> putStrLn "missing size and number of ones"
+                 ms = take (read numTakes) (connectedSquares (read sizeStr) (read numOnesStr))
+        _ -> putStrLn "missing size, umber of ones and number of takes"
 
 
 main :: IO ()
