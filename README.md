@@ -3,11 +3,11 @@
 
 Haskell project accompanying a series of blog posts:
 
-* [part 1]({{< relref "/posts/magicsquare" >}}): naive brute force exhaustive search
-* [part 2]({{< relref "/posts/magicsquare2" >}}): smarter exhaustive search
-* [part 3]({{< relref "/posts/magicsquare3" >}}): inductive graphs
-* [part 4]({{< relref "/posts/magicsquare4" >}}): connected magic squares
-* [part 5]({{< relref "/posts/magicsquare5" >}}): experiments
+* [part 1]("https://sagenhaft.space/posts/magicsquare"): naive brute force exhaustive search
+* [part 2]("https://sagenhaft.space/posts/magicsquare2"): smarter exhaustive search
+* [part 3]("https://sagenhaft.space/posts/magicsquare3"): inductive graphs
+* [part 4]("https://sagenhaft.space/posts/magicsquare4"): connected magic squares
+* [part 5]("https://sagenhaft.space/posts/magicsquare5"): experiments
 
 solving this [problem](https://mathstodon.xyz/@Elmusfire/110859269669280771) from one of my Mastodon feeds:
 
