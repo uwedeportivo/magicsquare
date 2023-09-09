@@ -1,6 +1,6 @@
 module MagicSquare  (magicSquares, connectedSquares) where
 
-import Data.Array
+import Data.Array ( Ix(range), (!), array, Array )
 
 
 allTrue :: (a -> Bool) -> [a] -> Bool
