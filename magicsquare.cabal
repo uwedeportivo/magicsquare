@@ -67,13 +67,36 @@ library
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.18.0.0, array
+    build-depends:    base ^>=4.18.0.0, magicsquare-internal
 
     -- Directories containing source files.
     hs-source-dirs:   src
 
     -- Base language which the package is written in.
     default-language: Haskell2010
+
+library magicsquare-internal
+    -- Import common warning flags.
+    import:           warnings
+
+    -- Modules exported by the library.
+    exposed-modules:  MagicSquareInternal
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- Other library packages from which modules are imported.
+    build-depends:    base ^>=4.18.0.0, array
+
+    -- Directories containing source files.
+    hs-source-dirs:   internal
+
+    -- Base language which the package is written in.
+    default-language: Haskell2010
+
 
 executable magicsquare
     -- Import common warning flags.
@@ -119,11 +142,12 @@ test-suite magicsquare-test
     hs-source-dirs:   test
 
     -- The entrypoint to the test suite.
-    main-is:          MagicSquareTest.hs
+    main-is:          Main.hs
 
     -- Test dependencies.
     build-depends:
         base ^>=4.18.0.0,
         magicsquare,
+        magicsquare-internal,
         hspec
 
