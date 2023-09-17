@@ -97,6 +97,28 @@ library magicsquare-internal
     -- Base language which the package is written in.
     default-language: Haskell2010
 
+library examples
+    -- Import common warning flags.
+    import:           warnings
+
+    -- Modules exported by the library.
+    exposed-modules:  Examples
+
+    -- Modules included in this library but not exported.
+    -- other-modules:
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+
+    -- Other library packages from which modules are imported.
+    build-depends:    base ^>=4.18.0.0, array, magicsquare-internal, magicsquare
+
+    -- Directories containing source files.
+    hs-source-dirs:   examples
+
+    -- Base language which the package is written in.
+    default-language: Haskell2010
+
 
 executable magicsquare
     -- Import common warning flags.
