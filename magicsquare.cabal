@@ -98,8 +98,7 @@ library magicsquare-internal
     default-language: Haskell2010
 
 library examples
-    -- Import common warning flags.
-    import:           warnings
+    ghc-options: -Wno-unused-imports
 
     -- Modules exported by the library.
     exposed-modules:  Examples
