@@ -14,21 +14,21 @@ common warnings
 library
     import:           warnings
     exposed-modules:  MagicSquare
-    build-depends:    base ^>=4.18.0.0, magicsquare-internal
+    build-depends:    base ^>=4.19.0.0, magicsquare-internal
     hs-source-dirs:   src
     default-language: Haskell2010
 
 library magicsquare-internal
     import:           warnings
     exposed-modules:  MagicSquareInternal
-    build-depends:    base ^>=4.18.0.0, array
+    build-depends:    base ^>=4.19.0.0, array
     hs-source-dirs:   internal
     default-language: Haskell2010
 
 library examples
     ghc-options: -Wno-unused-imports
     exposed-modules:  Examples
-    build-depends:    base ^>=4.18.0.0, array, magicsquare-internal, magicsquare
+    build-depends:    base ^>=4.19.0.0, array, magicsquare-internal, magicsquare
     hs-source-dirs:   examples
     default-language: Haskell2010
 
@@ -36,7 +36,7 @@ executable magicsquare
     import:           warnings
     main-is:          Main.hs
     build-depends:
-        base ^>=4.18.0.0,
+        base ^>=4.19.0.0,
         magicsquare
     hs-source-dirs:   app
     default-language: Haskell2010
@@ -48,8 +48,7 @@ test-suite magicsquare-test
     hs-source-dirs:   test
     main-is:          Main.hs
     build-depends:
-        base ^>=4.18.0.0,
+        base ^>=4.19.0.0,
         magicsquare,
         magicsquare-internal,
         hspec
-

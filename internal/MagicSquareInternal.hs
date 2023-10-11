@@ -134,7 +134,9 @@ solvedConnected k s = (length rows) == size && (allTrue (k ==) cs) && (length vs
     size = length cs
     ma = matrixToArray rows
     g = matrixToGraph size ma
-    sn = fst (head g)
+    sn = case g of
+       (gc:_) -> fst gc
+       [] -> 0
     vs = dfs [sn] g
 
 search :: (Int -> State -> Bool) -> Int -> [State] -> [State]
